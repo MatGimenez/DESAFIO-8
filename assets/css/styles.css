@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    grid-area: nav;
+    background-color: #272829;
+    color: #FFF6E0;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+    padding: 1rem;
+    font-size: 3rem;
+}
+aside{
+    grid-area: menus;
+    background-color: #61677A;
+    color: #FFF6E0;
+}
+aside h3{
+    font-size: 2rem;
+    font-stretch: extra-expanded;
+}
+aside li{
+    padding: 2px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+aside span{
+    font-weight: 100;
+    color: #FFD369;
+}
+
+section{
+    grid-area: main;
+    background-color: #D8D9DA;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 1rem;
+}
+footer{
+    grid-area: pie;
+    background-color: #272829;
+    color: #FFF6E0;
+    text-align: center;
+}
+footer p{
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+body{
+    display: grid;
+    grid-template-areas:
+    'nav nav'
+    'menus main'
+    'pie pie';
+    height: 100vh;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 15% 85%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navbar ul li{
+    
+    text-decoration: none;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+article h4{
+    color: #61677A;
+    font-size: 1.3rem;
+}
+
+article img{
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
+.button{
+    margin-top: 2rem;
+    padding:1rem 0 1rem 0;
+    text-align: center;
+    background-color: #F4CE14;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-stretch: extra-expanded;
+}
+
+/* Uso Media Queries para pantallas bajo 1366 px*/
+@media (max-width: 1400px) {
+
+    header h1{
+        font-size: 2rem;
+    }
+
+    article img{
+        height: 90px;
+    }
+    .button{
+        margin-top: 1rem;
+        padding:0.5rem 0 0.5rem 0;
+    }
+}
